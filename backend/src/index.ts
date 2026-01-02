@@ -51,6 +51,7 @@ const start = async () => {
     try {
         await app.listen({ port: PORT, host: '0.0.0.0' });
         app.log.info(`Server listening on ${PORT}`);
+        app.log.info(`Documentation available at http://localhost:${PORT}/documentation`);
     } catch (err) {
         fastify.log.error(err);
         process.exit(1);
